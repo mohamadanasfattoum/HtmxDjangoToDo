@@ -10,15 +10,19 @@
 
     <div class="container my-5">
         <h4>ToDo List</h4>
-        <form action="/create" method="post" class="row mt-4">
+        <form action="/create" method="post" class="row mt-4" hx-target='#todoList'>
             {% csrf_token %}
             <div class="col-lg-10">
-                <input type="text" placeholder="Enter ToDo" class="form-control">
+                <input type="text" placeholder="Enter ToDo" name="title" class="form-control">
             </div>
             <div class="col-lg-2">
                 <button type="submit" class="btn btn-success"> Add Todo</button>
             </div>
         </form>
+
+        <div id="todoList">
+            {% include 'todo_list.html' %}
+        </div>
 
     </div>
 
