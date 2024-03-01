@@ -21,5 +21,5 @@ from notes.views import todo_list, create_todo
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('' , todo_list),
-    path('create/' , create_todo),
+    path('create' , create_todo),
 ]

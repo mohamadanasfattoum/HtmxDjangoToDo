@@ -8,10 +8,10 @@ def todo_list(request):
     return render(request,'main.html',{'todos':data})
 
 
-def create_todo(requste):
-    title = requste.POST['title']
-    todo = Todo.objects.create(title=title)
+def create_todo(request):
+    note = request.POST['note']
+    todo = Todo.objects.create(note=note)
 
     todos = Todo.objects.all()
-    return render(request,'list.html',{'todos':todos})
+    return render(request,'todo_list.html',{'todos':todos})
 
