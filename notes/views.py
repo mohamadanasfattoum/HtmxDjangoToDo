@@ -10,7 +10,7 @@ def todo_list(request):
 
 def create_todo(request):
     note = request.POST['note']
-    todo = Todo.objects.create(note=note)
+    Todo.objects.create(note=note)
 
     todos = Todo.objects.all()
     return render(request,'todo_list.html',{'todos':todos})

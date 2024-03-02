@@ -10,7 +10,7 @@
 
     <div class="container my-5">
         <h4>ToDo List</h4>
-        <form action="/create" method="post" class="row mt-4" hx-target='#todoList'>
+        <form hx-post="/create" method="post" class="row mt-4" hx-target='#todoList'>
             {% csrf_token %}
             <div class="col-lg-10">
                 <input type="text" placeholder="Enter ToDo" name="note" class="form-control">
