@@ -3,9 +3,13 @@
     <ul class="list-group my-5">
         
         {% for todo in todos %}            
-            <li class="list-group-item">
-
-                {{todo.note}}
+            <li class=" my-1 border rounded p-2 row">
+                <div class="col-lg-10">
+                    {{todo.note}}
+                </div>
+                <div class="col-lg-2">
+                    <button class="btn btn-danger btn-sm ">Delete</button>
+                </div>
             </li>
         {% endfor %}
             
