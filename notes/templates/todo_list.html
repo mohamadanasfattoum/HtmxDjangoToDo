@@ -5,9 +5,10 @@
         {% for todo in todos %}            
             <li class=" my-1 border rounded p-2 row">
                 <div class="col-lg-10">
-                    {{todo.note}}
+                    <p class=" {% if todo.done %} done {% endif %}">{{todo.note}}</p>
                 </div>
                 <div class="col-lg-2">
+                    <button class="btn btn-success btn-sm" hx-get="{% url 'todo_done' todo.id %}" hx-target='#todoList'>Completed</button>
                     <button class="btn btn-danger btn-sm" hx-get="{% url 'todo_delete' todo.id %}" hx-target='#todoList'>Delete</button>
                 </div>
             </li>

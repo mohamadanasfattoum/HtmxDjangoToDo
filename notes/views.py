@@ -21,3 +21,12 @@ def delete_todo(request,pk):
 
     todos = Todo.objects.all()
     return render(request,'todo_list.html',{'todos':todos})
+
+
+def mark_todo(request,pk):
+    todo = Todo.objects.get(id=pk)
+    todo.done = True
+    todo.save()
+
+    todos = Todo.objects.all()
+    return render(request,'todo_list.html',{'todos':todos})
