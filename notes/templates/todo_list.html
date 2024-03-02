@@ -8,7 +8,7 @@
                     {{todo.note}}
                 </div>
                 <div class="col-lg-2">
-                    <button class="btn btn-danger btn-sm ">Delete</button>
+                    <button class="btn btn-danger btn-sm" hx-get="{% url 'todo_delete' todo.id %}" hx-target='#todoList'>Delete</button>
                 </div>
             </li>
         {% endfor %}

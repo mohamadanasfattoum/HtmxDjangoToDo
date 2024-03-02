@@ -15,3 +15,9 @@ def create_todo(request):
     todos = Todo.objects.all()
     return render(request,'todo_list.html',{'todos':todos})
 
+def delete_todo(request,pk):
+    todo = Todo.objects.get(id=pk)
+    todo.delete()
+
+    todos = Todo.objects.all()
+    return render(request,'todo_list.html',{'todos':todos})
