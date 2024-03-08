@@ -35,3 +35,6 @@ HtmxDjangoToDo is a simple To-Do list application built using Django and Htmx. I
    - The home page displays your existing tasks.
    - You can mark tasks as completed, edit task details, or delete tasks.
 
+
+### project screenshot
+![](https://github.com/mohamadanasfattoum/HtmxDjangoToDo/blob/main/Screenshot%202024-03-08%20225104.png)
